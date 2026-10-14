@@ -119,7 +119,23 @@ if (-not (Test-Path $BackupPath)) {
 Write-Host ""
 Write-Host "5. Applying RTL & Vazirmatn patch..." -ForegroundColor Yellow
 $PrebuiltPatched = "$DshAsarPath.patched"
-$PatchScript = Join-Path $PSScriptRoot "patch_dsh.js"
+
+$PatchScript = ""
+if ($PSScriptRoot) {
+    $PatchScript = Join-Path $PSScriptRoot "patch_dsh.js"
+}
+if (-not ($PatchScript -and (Test-Path $PatchScript))) {
+    $PatchScript = "$env:TEMP\patch_dsh.js"
+    Write-Host "Fetching patcher engine..." -ForegroundColor Cyan
+    $RemoteUrl = "https://raw.githubusercontent.com/Abulfadl-Ahmadi/DeepSeek-Harness-RTL/main/patch_dsh.js"
+    try {
+        Invoke-WebRequest -Uri $RemoteUrl -OutFile $PatchScript -UseBasicParsing
+    } catch {
+        Write-Host "❌ Failed to fetch patcher engine ($($_.Exception.Message))." -ForegroundColor Red
+        try { Read-Host "Press Enter to exit..." } catch { }
+        exit 1
+    }
+}
 
 $Applied = $false
 if (Test-Path $PrebuiltPatched) {

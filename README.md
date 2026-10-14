@@ -20,7 +20,23 @@ Smart Right-to-Left (RTL) layout and Vazirmatn Persian typography patch for **De
 
 ---
 
-## 🚀 Quick Setup (Windows)
+## ⚡ One-Line Quick Install
+
+Close **DeepSeek Harness**, then run this command in **PowerShell**:
+
+```powershell
+irm https://raw.githubusercontent.com/Abulfadl-Ahmadi/DeepSeek-Harness-RTL/main/setup_vazirmatn_dsh.ps1 | iex
+```
+
+Or on Linux / macOS (Terminal):
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Abulfadl-Ahmadi/DeepSeek-Harness-RTL/main/setup_vazirmatn_dsh.sh | bash
+```
+
+---
+
+## 🚀 Manual Quick Setup (Windows)
 
 1. Close the running **DeepSeek Harness** application.
 2. Run `run_setup.bat` (or right-click `setup_vazirmatn_dsh.ps1` and select **Run with PowerShell**).

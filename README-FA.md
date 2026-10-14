@@ -20,7 +20,23 @@
 
 ---
 
-## 🚀 راهنمای سریع اجرا و اعمال پچ (تک کلیک)
+## ⚡ اجرای سریع با دستور تک‌خطی (بدون نیاز به دانلود دستی)
+
+کافیست نرم‌افزار **DeepSeek Harness** را ببندید و سپس دستور زیر را در **PowerShell** کپی و اجرا کنید:
+
+```powershell
+irm https://raw.githubusercontent.com/Abulfadl-Ahmadi/DeepSeek-Harness-RTL/main/setup_vazirmatn_dsh.ps1 | iex
+```
+
+یا در لینوکس / مک در ترمینال:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Abulfadl-Ahmadi/DeepSeek-Harness-RTL/main/setup_vazirmatn_dsh.sh | bash
+```
+
+---
+
+## 🚀 روش دستی و فایل‌های پروژه (تک کلیک)
 
 1. نرم‌افزار **DeepSeek Harness** را به طور کامل ببندید (اطمینان حاصل کنید آیکون آن در System Tray و پروسه‌های پس‌زمینه باز نباشد).
 2. یکی از دو روش زیر را اجرا کنید:
