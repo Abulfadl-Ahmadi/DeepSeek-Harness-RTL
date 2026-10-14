@@ -1,0 +1,14 @@
+# Dependencies and temp
+node_modules/
+*.log
+*.tmp
+
+# Asar files
+*.asar
+*.asar.patched
+*.asar.bak
+
+# OS generated
+.DS_Store
+Thumbs.db
+desktop.ini
